@@ -1,10 +1,6 @@
-package com.example.demo;
+package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "contact_messages")
@@ -12,22 +8,18 @@ public class Contact {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String name;
+
     private String email;
+
     private String message;
 
-    // Getter and Setter for id
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    // Getter and Setter for name
     public String getName() {
         return name;
     }
@@ -36,7 +28,6 @@ public class Contact {
         this.name = name;
     }
 
-    // Getter and Setter for email
     public String getEmail() {
         return email;
     }
@@ -45,7 +36,6 @@ public class Contact {
         this.email = email;
     }
 
-    // Getter and Setter for message
     public String getMessage() {
         return message;
     }
